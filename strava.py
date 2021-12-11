@@ -21,30 +21,6 @@ driver.get('https://www.strava.com/login')
 #https://www.strava.com/athletes/52373249
 main_page = driver.page_source
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#print(main_page)
-
 element_text = driver.find_element_by_id("email")
 element_text.click()
 element_text.send_keys(login)
@@ -107,31 +83,3 @@ for h in hrefs:
     #print("done")
 
 wb.save('time.xlsx')
-'''
-        table1 = driver.find_element(By.XPATH, "//*[contains(@class,'running')]").find_element(By.XPATH, "//table[contains(@class,'dense')]/tbody[3]/tr[6]/td[1]")
-        table2 = driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/div[2]/div[2]/div[3]/div[2]/table/tbody[3]/tr[6]/td[2]/a")
-        tableh = driver.find_element(By.XPATH, "//*[contains(@class,'running')]").find_element(By.XPATH, "//table[contains(@class,'dense')]/tbody[3]/tr[6]/td[2]/a")
-        tablem = driver.find_element(By.XPATH, "//*[contains(@class,'running')]").find_element(By.XPATH, "//table[contains(@class,'dense')]/tbody[3]/tr[7]/td[2]")
-        tablel = driver.find_element(By.XPATH, "//*[contains(@class,'running')]").find_elements(By.XPATH, "//table[contains(@class,'dense')]/tbody[3]/tr[6]/td")
-
-        print(table1.get_attribute("innerHTML").splitlines()[0])
-        #print(table2.text)
-
-        print(tableh.text)
-        
-        print(tablem.text)
-        try:
-            pass
-        except:
-            pass
-'''
-
-
-'''
-        print(len(tablel))
-        for t in range(1, len(tablel)+1):
-            print(driver.find_element(By.XPATH, "//*[contains(@class,'running')]").find_element(By.XPATH, "//table[contains(@class,'dense')]/tbody[3]/tr[6]/td["+str(i)+"]").text)
-'''
-
-# element_text = driver.find_element_by_id("running-ytd")
-
